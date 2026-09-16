@@ -50,4 +50,5 @@ Opposite-direction turns are blocked to prevent the snake from reversing into it
 ├── snake.py       # Snake movement, direction, and growth
 ├── food.py        # Food creation and random positioning
 ├── scoreboard.py  # Score display and game-over message
+├── data.txt  # Tracks players high score
 └── README.md       # Project documentation
