@@ -1,16 +1,16 @@
 size = int(input("How many elements would you like to introduce?: "))
-list = []
+elements = []
 
 for i in range(size):
     choice = int(input("Enter a number: "))
-    list.append(choice)
+    elements.append(choice)
 
 temp = 0
 for i in range(size):
     for j in range(size):
-        if list[i] < list[j]:
-            temp = list[i]
-            list[i] = list[j]
-            list[j] = temp
+        if elements[i] < elements[j]:
+            temp = elements[i]
+            elements[i] = elements[j]
+            elements[j] = temp
 
-print(f"This is the sorted list: {list}")
+print(f"This is the sorted list: {elements}")
