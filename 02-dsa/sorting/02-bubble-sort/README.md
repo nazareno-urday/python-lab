@@ -115,7 +115,7 @@ cd bubble-sort
 Run the program:
 
 ```bash
-python bubble_sort.py
+python main.py
 ```
 
 No external libraries are required.

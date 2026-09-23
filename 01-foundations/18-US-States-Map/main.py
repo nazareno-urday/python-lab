@@ -10,13 +10,9 @@ def create_turtle():
     state_name.write(guess)
 
 def create_csv():
-    for correct_guess in correct_guesses:
-        if correct_guess in states:
-            states.remove(correct_guess)
-
-    data = {"states": states}
-    new_df = pd.DataFrame(data)
-    new_df.to_csv("missing_states.csv")
+    missing_states = [state for state in states if state not in correct_guesses]
+    new_df = pd.DataFrame({"state": missing_states})
+    new_df.to_csv("missing_states.csv", index=False)
 
 df = pd.read_csv("50_states.csv")
 screen = Screen()

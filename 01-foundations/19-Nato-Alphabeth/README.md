@@ -1,1 +1,0 @@
-# So for this little project, ive been practising list comprehension.
