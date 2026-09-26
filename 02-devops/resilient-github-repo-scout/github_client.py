@@ -7,7 +7,7 @@ def test_github_authentication(token):
     }
 
     try:
-        response = requests.get(config.GITHUB_USER_URL, headers=headers,timeout=10)
+        response = requests.get(config.GITHUB_USER_URL, headers=headers, timeout=10)
         print(f"{config.GITHUB_USER_URL}: status code ({response.status_code})")
         response.raise_for_status()
         data = response.json()
@@ -34,7 +34,7 @@ def search_github_repositories(token):
     }
 
     try:
-        response = requests.get(config.GITHUB_SEARCH_URL,params=params,headers=headers,timeout=10)
+        response = requests.get(config.GITHUB_SEARCH_URL, params=params, headers=headers, timeout=10)
         print(f"\n{config.GITHUB_SEARCH_URL}: status code ({response.status_code})\n")
         response.raise_for_status()
         data = response.json()

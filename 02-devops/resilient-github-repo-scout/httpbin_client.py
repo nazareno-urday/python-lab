@@ -9,7 +9,7 @@ def test_basic_authentication():
     password = "mypsw"
 
     try:
-        response = requests.get(config.HTTPBIN_BASIC_AUTH_URL,auth=(user,password),timeout=10)
+        response = requests.get(config.HTTPBIN_BASIC_AUTH_URL, auth=(user, password), timeout=10)
         print(f"{config.HTTPBIN_BASIC_AUTH_URL}: status code ({response.status_code})")
         response.raise_for_status()
         data = response.json()

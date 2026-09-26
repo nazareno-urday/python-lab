@@ -229,7 +229,7 @@ Open `.env` and replace the example value with your GitHub token:
 TOKEN=your_real_github_token
 ```
 
-The `.env` file is excluded through `.gitignore` and must never be committed.
+The `.env` file is excluded through `../../.gitignore` and must never be committed.
 
 ---
 
