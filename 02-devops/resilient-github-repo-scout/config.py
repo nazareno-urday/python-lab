@@ -1,4 +1,6 @@
 import os
+from typing import Optional
+
 import dotenv
 
 GITHUB_API_BASE = "https://api.github.com"
@@ -10,7 +12,7 @@ HTTPBIN_BASIC_AUTH_URL = f"{HTTPBIN_API_BASE}/basic-auth/myuser/mypsw"
 HTTPBIN_POST_URL = f"{HTTPBIN_API_BASE}/post"
 HTTPBIN_RETRY_URL = f"{HTTPBIN_API_BASE}/status/200,500,503,404"
 
-def load_github_token():
+def load_github_token() -> Optional[str]:  # type: ignore[return]
     dotenv.load_dotenv()
     token = os.getenv("TOKEN")
 

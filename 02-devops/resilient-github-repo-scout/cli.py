@@ -2,7 +2,7 @@ import config
 import github_client
 import httpbin_client
 
-def show_main_menu():
+def show_main_menu() -> str:
     print("\n === Resilient GitHub Repo Scout === ")
     print("\nOptions:\n"
           "1. Search Github Repositories\n"
@@ -21,7 +21,7 @@ def show_main_menu():
             return option
 
 
-def show_authentication_menu():
+def show_authentication_menu() -> str:
     print("\nOptions:\n"
           "1. Test Github Token Authentication\n"
           "2. Test Basic Authentication\n"
@@ -37,7 +37,7 @@ def show_authentication_menu():
             return option
 
 
-def show_retries_menu():
+def show_retries_menu() -> str:
     print("\nOptions:\n"
           "1. Test Simple Retry\n"
           "2. Test Exponential Backoff and Jitter\n"
@@ -52,7 +52,7 @@ def show_retries_menu():
             return option
 
 
-def run_cli():
+def run_cli() -> None:
     token = config.load_github_token()
 
     if token is None:

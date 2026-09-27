@@ -4,7 +4,7 @@ import time
 import requests
 import config
 
-def test_basic_authentication():
+def test_basic_authentication() -> None:
     user = "myuser"
     password = "mypsw"
 
@@ -19,7 +19,7 @@ def test_basic_authentication():
         print(f"Authentication failed, error: {error}")
 
 
-def test_simple_retry():
+def test_simple_retry() -> None:
     max_retries = 4
     delay = 2
 
@@ -32,17 +32,17 @@ def test_simple_retry():
             print(f"Successful response: {response.status_code}")
             break
 
-        except requests.exceptions.Timeout as error:
+        except requests.exceptions.Timeout:
             print("Request timed out")
 
         except requests.exceptions.HTTPError as error:
 
-            if error.response.status_code < 500:
-                print(f"Failed with client error: {error.response.status_code}")
+            if error.response.status_code < 500:  # type: ignore[union-attr]
+                print(f"Failed with client error: {error.response.status_code}")  # type: ignore[union-attr]
                 break
 
             else:
-                print(f"Failed with server error: {error.response.status_code}")
+                print(f"Failed with server error: {error.response.status_code}")  # type: ignore[union-attr]
 
         except requests.exceptions.RequestException as error:
             print(f"Failed with request error: {error}")
@@ -55,7 +55,7 @@ def test_simple_retry():
         print(f"All {max_retries} attempts failed.")
 
 
-def test_exponential_backoff():
+def test_exponential_backoff() -> None:
     max_retries = 3
     base_delay = 2
 
@@ -70,12 +70,12 @@ def test_exponential_backoff():
 
         except requests.exceptions.HTTPError as error:
 
-            if error.response.status_code < 500:
-                print(f"Failed with client error: {error.response.status_code}")
+            if error.response.status_code < 500:  # type: ignore[union-attr]
+                print(f"Failed with client error: {error.response.status_code}")  # type: ignore[union-attr]
                 break
 
             else:
-                print(f"Failed with server error: {error.response.status_code}")
+                print(f"Failed with server error: {error.response.status_code}")  # type: ignore[union-attr]
 
         except requests.exceptions.RequestException as error:
             print(f"Failed with request error: {error}")
@@ -92,7 +92,7 @@ def test_exponential_backoff():
         print(f"All {max_retries} attempts failed.")
 
 
-def test_post_request():
+def test_post_request() -> None:
     payload = {
         "project" : "Resilient GitHub Repo Scout",
         "status" : "testing",

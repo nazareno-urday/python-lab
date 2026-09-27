@@ -1,7 +1,7 @@
 import requests
 import config
 
-def test_github_authentication(token):
+def test_github_authentication(token : str) -> None:
     headers = {
         "Authorization": f"Bearer {token}"
     }
@@ -17,7 +17,7 @@ def test_github_authentication(token):
         print(f"Authentication failed, error: {error}")
 
 
-def search_github_repositories(token):
+def search_github_repositories(token : str) -> None:
     query = input("\nSearch Github Repositories: ").strip()
     number_of_results = input("How many repositories?: ").strip()
 
@@ -34,7 +34,7 @@ def search_github_repositories(token):
     }
 
     try:
-        response = requests.get(config.GITHUB_SEARCH_URL, params=params, headers=headers, timeout=10)
+        response = requests.get(config.GITHUB_SEARCH_URL, params=params, headers=headers, timeout=10)  # type: ignore[arg-type]
         print(f"\n{config.GITHUB_SEARCH_URL}: status code ({response.status_code})\n")
         response.raise_for_status()
         data = response.json()

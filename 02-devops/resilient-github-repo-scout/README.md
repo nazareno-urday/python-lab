@@ -9,6 +9,7 @@
   <img src="https://img.shields.io/badge/GitHub-REST_API-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub REST API">
   <img src="https://img.shields.io/badge/Interface-CLI-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white" alt="CLI">
   <img src="https://img.shields.io/badge/HTTP-Requests-FF6F00?style=for-the-badge" alt="HTTP Requests">
+  <img src="https://img.shields.io/badge/Typing-Type_Hints-8A2BE2?style=for-the-badge" alt="Python Type Hints">
 </p>
 
 </div>
@@ -21,7 +22,7 @@
 
 The project combines the GitHub REST API with httpbin testing endpoints to provide a controlled environment for exploring both successful requests and common failure scenarios.
 
-Unlike a basic API script that sends one request and terminates, this application includes multiple authentication methods, configurable searches, exception handling, fixed retries, exponential backoff, jitter, and separation of responsibilities across dedicated Python modules.
+Unlike a basic API script that sends one request and terminates, this application includes multiple authentication methods, configurable searches, exception handling, fixed retries, exponential backoff, jitter, type hints for function parameters and return values, and separation of responsibilities across dedicated Python modules.
 
 ---
 
@@ -62,6 +63,13 @@ Unlike a basic API script that sends one request and terminates, this applicatio
 - Uses the `application/json` content type.
 - Reads and displays the JSON returned by the server.
 
+### Type annotations
+
+- Uses type hints for function parameters and return values.
+- Documents the expected data exchanged between modules.
+- Represents values that may be absent using optional types.
+- Improves code readability and static analysis in development tools.
+
 ---
 
 ## 🧠 Concepts demonstrated
@@ -83,6 +91,9 @@ This project applies the following Python and HTTP concepts:
 - Fixed retry intervals
 - Exponential backoff
 - Random jitter
+- Function parameter and return type hints
+- Optional return types
+- Static type analysis
 - Modular Python architecture
 - Command-line menu navigation
 
@@ -178,8 +189,6 @@ delay = base_delay × 2^(attempt - 1) + jitter
 git clone https://github.com/nazareno-urday/resilient-github-repo-scout.git
 cd resilient-github-repo-scout
 ```
-
-Replace `YOUR_USERNAME` with your GitHub username.
 
 ### 2. Create a virtual environment
 
@@ -342,7 +351,7 @@ requests
 python-dotenv
 ```
 
-Python standard-library modules such as `json`, `random`, `time` and `os` do not require separate installation.
+Python standard-library modules such as `json`, `random`, `time`, `os` and `typing` do not require separate installation.
 
 ---
 
@@ -365,6 +374,8 @@ Python standard-library modules such as `json`, `random`, `time` and `os` do not
 This project was developed as a practical transition from basic Python programs to modular applications that communicate with external services.
 
 It demonstrates how an API client can remain understandable while handling authentication, secrets, JSON data, HTTP failures, timeouts and retry strategies in a structured way.
+
+Type hints document the parameters and return values of its functions, making the responsibilities and data flow between modules easier to understand and analyze.
 
 ---
 
