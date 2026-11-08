@@ -84,6 +84,15 @@ Every topic follows the same process:
 
 Folders will be created as implementations are added, keeping the repository organized without empty sections.
 
+## ✅ Progress so far
+
+| Topic | Algorithm | Status |
+|---|---|---|
+| [Sorting](sorting/) | [Exchange Sort](sorting/01-exchange-sort/) | Implemented |
+| [Sorting](sorting/) | [Bubble Sort](sorting/02-bubble-sort/) | Implemented |
+
+Next in the sorting track: Selection Sort, Insertion Sort and Merge Sort.
+
 ## 🧠 Engineering mindset
 
 A correct solution is only the beginning.
