@@ -56,6 +56,17 @@ Early code is not hidden or rewritten to make it look more advanced than it was.
 
 ---
 
+## 🗺️ Laboratory map
+
+| Section | Focus | Status |
+| ------- | ----- | ------ |
+| [`01-foundations`](./01-foundations/) | Python fundamentals, OOP, games, files, comprehensions, exceptions, generators and typing | 23 experiments |
+| [`02-devops`](./02-devops/) | HTTP requests, error handling, pytest and a resilient GitHub client | In progress |
+| [`03-dsa`](./03-dsa/) | Sorting algorithms implemented from scratch | In progress |
+| [`04-data-science`](./04-data-science/) | Moved to its own repository | Separate repo |
+
+---
+
 ## 🧬 The scientific method
 
 Every experiment follows a highly sophisticated research process:
