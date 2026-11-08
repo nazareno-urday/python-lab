@@ -83,6 +83,34 @@ Later projects combine previous concepts inside graphical and event-driven progr
 * Score and state management.
 * Reading and writing external data.
 
+## 🗂️ Project index
+
+| # | Project | Main concepts |
+| - | ------- | ------------- |
+| 01 | Rock Paper Scissors | Input, randomness, conditionals |
+| 02 | Password Generator | Loops, lists, random choices |
+| 03 | Hangman | Loops, strings, game state |
+| 04 | Caesar Cipher | Functions, string indexing |
+| 05 | Blind Auction | Dictionaries, program flow |
+| 06 | Blackjack | Lists, functions, game logic |
+| 07 | Number Guessing | Loops, difficulty levels |
+| 08 | Higher Lower | Dictionaries, comparisons |
+| 09 | Coffee Machine | Dictionaries, resource tracking |
+| 10 | Calculator | Functions, dictionaries of operations |
+| 11 | Coffee Machine OOP | Classes and multiple modules |
+| 12 | Quiz Game OOP | Classes, objects, data models |
+| 13 | Hirst Painting | Turtle graphics, colors |
+| 14 | Etch A Sketch | Turtle events |
+| 15 | Turtle Race | Turtle, randomness, bets |
+| 16 | Snake Game | OOP, collisions, scoreboard, files |
+| 17 | Mail Merge | File reading and writing |
+| 18 | US States Map | CSV data, turtle, pandas |
+| 19 | NATO Alphabet | List and dictionary comprehensions |
+| 20 | Miles to Kilometers | Tkinter, arguments |
+| 21 | Updated Calculator | Exception handling |
+| 22 | Iterators and Generators | `yield`, `TypedDict` |
+| 23 | Typed Task Manager | Type hints, typed dictionaries |
+
 ## 🛠️ Development approach
 
 Every exercise is completed through active problem solving.
