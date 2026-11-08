@@ -46,6 +46,16 @@ Every concept is reinforced through original projects designed to turn technical
 
 ---
 
+## 📁 Current contents
+
+| Folder | Description |
+|---|---|
+| `practice/01-http` | Practice scripts for `GET`, `POST`, authentication and error handling |
+| `practice/02-pytest` | Pytest practice: decorators and parametrization |
+| `resilient-github-repo-scout` | CLI project that queries GitHub with configuration, retries and a dedicated client |
+
+---
+
 ## 🌐 HTTP APIs and resilient clients
 
 The first stage focuses on building Python applications that communicate reliably with external services.
